@@ -16,6 +16,7 @@ def slackNotificationChannel = "test-mobile-jenkins"
 def author = ""
 def message = ""
 def testSummary = ""
+def commitId = ""
 def total = 0
 def failed = 0
 def skipped = 0
@@ -49,6 +50,10 @@ def getGitAuthor = {
 
 def getLastCommitMessage = {
     message = sh(returnStdout: true, script: 'git log -1 --pretty=%B').trim()
+}
+
+def getCommitId = {
+    commitId = sh(returnStdout: true, script: 'git rev-parse HEAD')
 }
 
 def populateGlobalVariables = {
@@ -127,7 +132,7 @@ node {
                             ],
                             [
                                 title: "Last Commit SHA",
-                                value: "${env.GIT_COMMIT}",
+                                value: "${commitId}",
                                 short: false
                             ]
                         ]
