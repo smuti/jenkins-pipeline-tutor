@@ -59,6 +59,7 @@ def getCommitId = {
 def populateGlobalVariables = {
     getLastCommitMessage()
     getGitAuthor()
+    getCommitId()
 }
 
 node {
