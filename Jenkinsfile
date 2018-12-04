@@ -93,7 +93,7 @@ node {
                         fields: [
                             [
                                 title: "Branch",
-                                value: "${env.GIT_BRANCH}",
+                                value: "${env.BRANCH_NAME}",
                                 short: true
                             ],
                             [
@@ -117,7 +117,7 @@ node {
                         fields: [
                             [
                                 title: "Branch",
-                                value: "${env.GIT_BRANCH}",
+                                value: "${env.BRANCH_NAME}",
                                 short: true
                             ],
                             [
@@ -149,7 +149,7 @@ node {
                 fields: [
                     [
                         title: "Branch",
-                        value: "${env.GIT_BRANCH}",
+                        value: "${env.BRANCH_NAME}",
                         short: true
                     ],
                     [
