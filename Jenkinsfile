@@ -124,6 +124,11 @@ node {
                                 title: "Last Commit",
                                 value: "${message}",
                                 short: false
+                            ],
+                            [
+                                title: "Last Commit SHA",
+                                value: "${env.GIT_COMMIT}",
+                                short: false
                             ]
                         ]
                     ]
