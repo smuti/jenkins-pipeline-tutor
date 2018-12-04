@@ -158,6 +158,11 @@ node {
                         short: false
                     ],
                     [
+                        title: "Last Commit SHA",
+                        value: "${env.GIT_COMMIT}",
+                        short: false
+                    ],
+                    [
                         title: "Error",
                         value: "${e}",
                         short: false
